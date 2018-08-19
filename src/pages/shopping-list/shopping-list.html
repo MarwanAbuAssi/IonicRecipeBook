@@ -10,18 +10,18 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-<form>
+<form #f="ngForm" (ngSubmit)="onAddRecipe(f)">
  <ion-list>
    <ion-item>
      <ion-label fixed color="dark" > Name</ion-label>
-     <ion-input placeholder="max" type="text"></ion-input>
+     <ion-input placeholder="max" name="fulName" type="text" ngModel required></ion-input>
    </ion-item>
    <ion-item>
-     <ion-label fixed color="dark" > 2</ion-label>
-     <ion-input placeholder="2" type="number"></ion-input>
+     <ion-label fixed color="dark"> Amount</ion-label>
+     <ion-input placeholder="2" type="number" name="num" ngModel required> </ion-input>
    </ion-item>
 
-     <button ion-button  type="submit" block> Add Item</button>
+     <button ion-button  type="submit" [disabled]="!f.valid" block  > Add Item</button>
  </ion-list>
 </form>
 </ion-content>
