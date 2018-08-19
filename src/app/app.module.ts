@@ -11,6 +11,7 @@ import {RecipePage} from "../pages/recipe/recipe";
 import {RecipesPage} from "../pages/recipes/recipes";
 import {ShoppingListPage} from "../pages/shopping-list/shopping-list";
 import {TabsPage} from "../pages/tabs/tabs";
+import {ShoppingListaSevices} from "../Services/ShoppingListaSevices";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import {TabsPage} from "../pages/tabs/tabs";
 
 
   ],
-  providers: [
+  providers: [ShoppingListaSevices,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

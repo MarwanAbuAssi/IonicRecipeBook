@@ -2,7 +2,7 @@
 
 export class Ingrediants{
 
-  constructor(amount:number,name:string) {
+  constructor(public name :string ,public amount:number) {
 
   }
 }
