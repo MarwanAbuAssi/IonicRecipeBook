@@ -22,8 +22,8 @@ export class ShoppingListPage {
     console.log('ionViewDidLoad ShoppingListPage');
   }
   onAddRecipe(form: NgForm){
-    console.log(form.valid)
 this.shoppingListaSevices.addItem(form.value.name,form.value.amount)
+    console.log(form )
 
   }
 
